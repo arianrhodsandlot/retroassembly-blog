@@ -1,0 +1,42 @@
+{
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#@/*": "./src/*"
+  },
+  "scripts": {
+    "build": "astro build",
+    "dev": "astro dev",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "5.15.9"
+  },
+  "devDependencies": {
+    "@arianrhodsandlot/eslint-config": "0.23.0",
+    "@astrojs/rss": "4.0.13",
+    "@iconify-json/mdi": "1.2.3",
+    "@iconify/tailwind4": "1.1.0",
+    "@tailwindcss/typography": "0.5.19",
+    "@tailwindcss/vite": "4.1.17",
+    "@types/markdown-it": "14.1.2",
+    "@types/sanitize-html": "2.16.0",
+    "clsx": "2.1.1",
+    "eslint": "9.39.1",
+    "jiti": "2.6.1",
+    "markdown-it": "14.1.0",
+    "sanitize-html": "2.17.0",
+    "sass": "1.94.2",
+    "sharp": "0.34.5",
+    "tailwindcss": "4.1.17"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "sharp",
+      "unrs-resolver"
+    ]
+  }
+}

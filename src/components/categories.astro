@@ -1,0 +1,18 @@
+---
+interface Props {
+  categories?: string[]
+}
+const { categories } = Astro.props
+---
+
+{
+  categories ? (
+    <div>
+      {categories?.map((category) => (
+        <div class='bg-(--red-9) text-white inline-block font-mono leading-none mb-2 px-3 py-1 rounded-lg text-sm'>
+          {category}
+        </div>
+      ))}
+    </div>
+  ) : null
+}

@@ -1,0 +1,22 @@
+---
+import { links } from '#@/consts.ts'
+
+const currentYear = new Date().getFullYear()
+---
+
+<footer
+  class='py-10 gap-6 lg:gap-0 flex flex-col lg:flex-row lg:items-center justify-between border-t border-t-neutral-200 items-start'
+>
+  <p>© {currentYear}</p>
+
+  <div class='text-sm flex gap-6 flex-col lg:flex-row'>
+    {
+      links.map((link) => (
+        <a href={link.url} class='inline-flex items-center gap-1 text-(--red-9)'>
+          <span class={link.icon} />
+          {link.title}
+        </a>
+      ))
+    }
+  </div>
+</footer>

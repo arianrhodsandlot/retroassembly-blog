@@ -1,0 +1,43 @@
+---
+import { getCollection, render } from 'astro:content'
+import Categories from '#@/components/categories.astro'
+import FormattedDate from '#@/components/formatted-date.astro'
+import Layout from '#@/components/layout.astro'
+import { SiteDescription, SiteTitle } from '#@/consts.ts'
+
+const posts = await getCollection('posts')
+posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+---
+
+<Layout>
+  <title>{SiteTitle}</title>
+
+  <div class='flex flex-col gap-4 py-20'>
+    <h1 class='text-5xl font-semibold font-\[Roboto_Slab_Variable\] text-(--red-9)'>{SiteTitle}</h1>
+    <div class='text-lg text-neutral-500'>{SiteDescription}</div>
+  </div>
+
+  <hr class='my-4 border-neutral-200' />
+
+  <ul transition:name='post' class='divide-y divide-neutral-200 flex flex-col gap-4'>
+    {
+      posts.map((post) => (
+        <li class='flex py-12 flex-col lg:flex-row gap-4'>
+          <div class='flex-1 order-1 lg:order-0'>
+            <a href={`/posts/${encodeURIComponent(post.id)}`}>
+              <h2 class='text-3xl font-semibold'>{post.data.title}</h2>
+            </a>
+            <p class='text-lg mt-4 font-\[Roboto_Slab_Variable\]'>{post.data.description}</p>
+            <div class='mt-4 flex text-(--red-9)'>
+              <a href={`/posts/${encodeURIComponent(post.id)}`}>Continue reading →</a>
+            </div>
+          </div>
+          <div class='flex flex-col gap-2 lg:items-end'>
+            <Categories categories={post.data.categories} />
+            <FormattedDate date={post.data.pubDate} />
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

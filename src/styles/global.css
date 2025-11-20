@@ -1,0 +1,32 @@
+@import './fonts.css';
+@import './tailwind.css';
+
+:root {
+  --red-1: #fffcfc;
+  --red-2: #fff7f7;
+  --red-3: #feeaea;
+  --red-4: #fdd;
+  --red-5: #ffcfd0;
+  --red-6: #f9bfc1;
+  --red-7: #f0acae;
+  --red-8: #e69396;
+  --red-9: #be123c;
+  --red-10: #ad002f;
+  --red-11: #cb2546;
+  --red-12: #651723;
+}
+
+:root {
+  --global-font-family: 'Inter Variable', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--global-font-family);
+  text-autospace: normal;
+}
+
+.font-\[Roboto_Slab_Variable\] {
+  font-family: 'Roboto Slab Variable', serif;
+}

@@ -1,0 +1,43 @@
+---
+import { getCollection, render } from 'astro:content'
+import Categories from '#@/components/categories.astro'
+import FormattedDate from '#@/components/formatted-date.astro'
+import Layout from '#@/components/layout.astro'
+import { SiteTitle } from '#@/consts.ts'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts')
+
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }))
+}
+
+const { post } = Astro.props
+
+const { Content } = await render(post)
+---
+
+<Layout>
+  <title>{[post.data.title, SiteTitle].join(' - ')}</title>
+
+  <div class='flex flex-col gap-4 py-20'>
+    <h2 class='text-4xl font-semibold'>{post.data.title}</h2>
+  </div>
+
+  <hr class='my-4 border-neutral-200' />
+
+  <div transition:persist transition:name='post' class='flex flex-col py-12 lg:flex-row gap-4'>
+    <div class='flex-1 order-1 lg:order-0 prose max-w-full font-\[Roboto_Slab_Variable\]'>
+      <Content />
+    </div>
+    <div class='flex flex-col gap-2 lg:items-end'>
+      <Categories categories={post.data.categories} />
+      <FormattedDate date={post.data.pubDate} />
+    </div>
+    <div class='content'>
+      <slot />
+    </div>
+  </div>
+</Layout>
