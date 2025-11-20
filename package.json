@@ -1,9 +1,6 @@
 {
   "private": true,
   "type": "module",
-  "imports": {
-    "#@/*": "./src/*"
-  },
   "scripts": {
     "build": "astro build",
     "dev": "astro dev",

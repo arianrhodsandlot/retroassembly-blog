@@ -2,7 +2,7 @@ import rss from '@astrojs/rss'
 import { getCollection } from 'astro:content'
 import MarkdownIt from 'markdown-it'
 import sanitizeHtml from 'sanitize-html'
-import { SiteDescription, SiteTitle } from '#@/consts.ts'
+import { SiteDescription, SiteTitle } from '../consts.ts'
 
 const parser = new MarkdownIt()
 

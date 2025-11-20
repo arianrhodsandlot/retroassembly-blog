@@ -1,9 +1,9 @@
 ---
 import { getCollection, render } from 'astro:content'
-import Categories from '#@/components/categories.astro'
-import FormattedDate from '#@/components/formatted-date.astro'
-import Layout from '#@/components/layout.astro'
-import { SiteDescription, SiteTitle } from '#@/consts.ts'
+import Categories from '../components/categories.astro'
+import FormattedDate from '../components/formatted-date.astro'
+import Layout from '../components/layout.astro'
+import { SiteDescription, SiteTitle } from '../consts.ts'
 
 const posts = await getCollection('posts')
 posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
