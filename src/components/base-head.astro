@@ -4,7 +4,13 @@ import { SiteDescription, SiteTitle } from '../consts.ts'
 import SEO, { type Props as SEOProps } from './seo.astro'
 
 export type Props = Partial<SEOProps>
-const { title = SiteTitle, name = SiteTitle, description = SiteDescription, ...seo } = Astro.props
+const {
+  title = SiteTitle,
+  name = SiteTitle,
+  description = SiteDescription,
+  image = { src: 'https://retroassembly.com/assets/logo/logo-512x512.png', alt: SiteTitle },
+  ...seo
+} = Astro.props
 ---
 
 <meta charset='utf-8' />
