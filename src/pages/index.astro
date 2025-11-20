@@ -12,9 +12,15 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
 <Layout>
   <title>{SiteTitle}</title>
 
-  <div class='flex flex-col gap-4 py-20'>
+  <div class='flex flex-col gap-4 py-20 relative overflow-hidden'>
     <h1 class='text-5xl font-semibold font-\[Roboto_Slab_Variable\] text-(--red-9)'>{SiteTitle}</h1>
     <div class='text-lg text-neutral-500'>{SiteDescription}</div>
+
+    <img
+      class='shrink-0 size-72 absolute right-0 top-0  -translate-y-2/5 translate-x-2/5 opacity-30'
+      src='https://retroassembly.com/assets/logo/logo.svg'
+      alt='RetroAssembly Logo'
+    />
   </div>
 
   <hr class='my-4 border-neutral-200' />

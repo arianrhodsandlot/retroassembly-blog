@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config'
 
 export default defineConfig({
   site: 'https://blog.retroassembly.com',
-  trailingSlash: 'never',
+  trailingSlash: 'ignore',
   vite: {
     plugins: [tailwindcss()],
   },

@@ -24,6 +24,6 @@ export async function GET(context: { site: string }) {
     })),
     site: context.site,
     title: SiteTitle,
-    trailingSlash: false,
+    trailingSlash: true,
   })
 }
