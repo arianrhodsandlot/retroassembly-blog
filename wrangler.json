@@ -4,5 +4,8 @@
   "assets": {
     "directory": "./dist"
   },
-  "observability_enabled": true
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
 }
