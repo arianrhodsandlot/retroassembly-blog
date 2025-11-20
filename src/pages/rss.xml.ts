@@ -14,7 +14,7 @@ export async function GET(context: { site: string }) {
     customData: `<language>en-us</language>`,
     description: SiteDescription,
     items: posts.map((post) => ({
-      content: sanitizeHtml(parser.render(post.body), {
+      content: sanitizeHtml(parser.render(post.body || ''), {
         allowedTags: [...sanitizeHtml.defaults.allowedTags, 'img'],
       }),
       description: post.data.description,

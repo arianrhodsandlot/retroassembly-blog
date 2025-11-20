@@ -10,6 +10,13 @@
     "dev": "astro dev",
     "preview": "astro preview"
   },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged && pnpm tsc"
+  },
+  "lint-staged": {
+    "*.?(m|c)@(j|t)s?(x)": "eslint --fix",
+    "package.json": "pnpm dlx sort-package-json"
+  },
   "dependencies": {
     "astro": "5.15.9"
   },
@@ -25,18 +32,27 @@
     "clsx": "2.1.1",
     "eslint": "9.39.1",
     "jiti": "2.6.1",
+    "lint-staged": "16.2.7",
     "markdown-it": "14.1.0",
     "sanitize-html": "2.17.0",
     "sass": "1.94.2",
     "sharp": "0.34.5",
-    "tailwindcss": "4.1.17"
+    "simple-git-hooks": "2.13.1",
+    "tailwindcss": "4.1.17",
+    "wrangler": "4.49.0"
+  },
+  "packageManager": "pnpm@10.22.0",
+  "engines": {
+    "node": ">=25.2.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "esbuild",
       "sharp",
-      "unrs-resolver"
+      "simple-git-hooks",
+      "unrs-resolver",
+      "workerd"
     ]
   }
 }
