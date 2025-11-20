@@ -3,5 +3,6 @@
   "compatibility_date": "2025-11-20",
   "assets": {
     "directory": "./dist"
-  }
+  },
+  "observability_enabled": true
 }

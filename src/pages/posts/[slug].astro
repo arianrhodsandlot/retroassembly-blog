@@ -19,9 +19,11 @@ const { post } = Astro.props
 const { Content } = await render(post)
 ---
 
-<Layout>
-  <title>{[post.data.title, SiteTitle].join(' - ')}</title>
-
+<Layout
+  title={[post.data.title, SiteTitle].join(' - ')}
+  description={post.data.description}
+  canonicalURL={`/posts/${encodeURIComponent(post.id)}/`}
+>
   <div class='flex flex-col gap-4 py-20'>
     <h2 class='text-4xl font-semibold'>{post.data.title}</h2>
   </div>

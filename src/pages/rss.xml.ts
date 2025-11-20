@@ -18,7 +18,7 @@ export async function GET(context: { site: string }) {
         allowedTags: [...sanitizeHtml.defaults.allowedTags, 'img'],
       }),
       description: post.data.description,
-      link: `/posts/${encodeURIComponent(post.id)}`,
+      link: `/posts/${encodeURIComponent(post.id)}/`,
       pubDate: post.data.pubDate,
       title: post.data.title,
     })),

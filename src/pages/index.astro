@@ -17,7 +17,7 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
     <div class='text-lg text-neutral-500'>{SiteDescription}</div>
 
     <img
-      class='shrink-0 size-72 absolute right-0 top-0  -translate-y-2/5 translate-x-2/5 opacity-30'
+      class='shrink-0 size-72 absolute right-0 top-0 -translate-y-2/5 translate-x-2/5 opacity-30'
       src='https://retroassembly.com/assets/logo/logo.svg'
       alt='RetroAssembly Logo'
     />
@@ -30,12 +30,12 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
       posts.map((post) => (
         <li class='flex py-12 flex-col lg:flex-row gap-4'>
           <div class='flex-1 order-1 lg:order-0'>
-            <a href={`/posts/${encodeURIComponent(post.id)}`}>
+            <a href={`/posts/${encodeURIComponent(post.id)}/`}>
               <h2 class='text-3xl font-semibold'>{post.data.title}</h2>
             </a>
             <p class='text-lg mt-4 font-\[Roboto_Slab_Variable\]'>{post.data.description}</p>
             <div class='mt-4 flex text-(--red-9)'>
-              <a href={`/posts/${encodeURIComponent(post.id)}`}>Continue reading →</a>
+              <a href={`/posts/${encodeURIComponent(post.id)}/`}>Continue reading →</a>
             </div>
           </div>
           <div class='flex flex-col gap-2 lg:items-end'>
