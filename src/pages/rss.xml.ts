@@ -11,7 +11,7 @@ export async function GET(context: { site: string }) {
   posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
 
   return rss({
-    customData: `<language>en-us</language>`,
+    customData: '<language>en-us</language>',
     description: SiteDescription,
     items: posts.map((post) => ({
       content: sanitizeHtml(parser.render(post.body || ''), {

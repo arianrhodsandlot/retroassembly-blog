@@ -9,6 +9,10 @@ const posts = defineCollection({
       rssSchema,
       z.object({
         categories: z.array(z.string()),
+        image: z.object({
+          alt: z.string().optional(),
+          src: z.string().url(),
+        }),
         pubDate: z.date({ coerce: true }),
       }),
     ),

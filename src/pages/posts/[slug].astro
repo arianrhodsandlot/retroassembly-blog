@@ -23,6 +23,9 @@ const { Content } = await render(post)
   title={[post.data.title, SiteTitle].join(' - ')}
   description={post.data.description}
   canonicalURL={`/posts/${encodeURIComponent(post.id)}/`}
+  image={post.data.image
+    ? { src: post.data.image.src, alt: post.data.image.alt || post.data.title || SiteTitle }
+    : undefined}
 >
   <div class='flex flex-col gap-4 py-20'>
     <h2 class='text-4xl font-semibold'>{post.data.title}</h2>

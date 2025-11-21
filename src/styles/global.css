@@ -30,3 +30,7 @@ body {
 .font-\[Roboto_Slab_Variable\] {
   font-family: 'Roboto Slab Variable', serif;
 }
+
+.prose img {
+  @apply rounded border-2 border-neutral-400
+}
