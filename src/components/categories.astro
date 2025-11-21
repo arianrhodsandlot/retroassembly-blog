@@ -7,7 +7,7 @@ const { categories } = Astro.props
 
 {
   categories ? (
-    <div>
+    <div class='inline-flex gap-1'>
       {categories?.map((category) => (
         <div class='bg-(--red-9) text-white inline-block font-mono leading-none mb-2 px-3 py-1 rounded text-sm'>
           {category}
