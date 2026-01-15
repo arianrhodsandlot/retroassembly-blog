@@ -5,8 +5,9 @@ import FormattedDate from '../components/formatted-date.astro'
 import Layout from '../components/layout.astro'
 import { SiteDescription, SiteTitle } from '../consts.ts'
 
-const posts = await getCollection('posts')
-posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+const allPosts = await getCollection('posts')
+const now = new Date()
+const posts = allPosts.toSorted((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
 ---
 
 <Layout>

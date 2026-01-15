@@ -14,30 +14,30 @@
     "package.json": "pnpm dlx sort-package-json"
   },
   "dependencies": {
-    "astro": "5.16.0"
+    "astro": "5.16.9"
   },
   "devDependencies": {
-    "@arianrhodsandlot/eslint-config": "0.23.0",
+    "@arianrhodsandlot/eslint-config": "0.25.4",
     "@astrojs/rss": "4.0.14",
     "@iconify-json/mdi": "1.2.3",
-    "@iconify/tailwind4": "1.1.0",
+    "@iconify/tailwind4": "1.2.1",
     "@tailwindcss/typography": "0.5.19",
-    "@tailwindcss/vite": "4.1.17",
+    "@tailwindcss/vite": "4.1.18",
     "@types/markdown-it": "14.1.2",
     "@types/sanitize-html": "2.16.0",
     "clsx": "2.1.1",
-    "eslint": "9.39.1",
+    "eslint": "9.39.2",
     "jiti": "2.6.1",
     "lint-staged": "16.2.7",
     "markdown-it": "14.1.0",
     "sanitize-html": "2.17.0",
-    "sass": "1.94.2",
+    "sass": "1.97.2",
     "sharp": "0.34.5",
     "simple-git-hooks": "2.13.1",
-    "tailwindcss": "4.1.17",
-    "wrangler": "4.50.0"
+    "tailwindcss": "4.1.18",
+    "wrangler": "4.59.1"
   },
-  "packageManager": "pnpm@10.23.0",
+  "packageManager": "pnpm@10.28.0",
   "engines": {
     "node": ">=25.2.1"
   },
