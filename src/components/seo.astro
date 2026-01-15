@@ -46,7 +46,7 @@ const og = {
   image,
   locale,
   type: 'website',
-  ...(Astro.props.og ?? {}),
+  ...Astro.props.og,
 } satisfies OpenGraph
 
 const twitter = {
