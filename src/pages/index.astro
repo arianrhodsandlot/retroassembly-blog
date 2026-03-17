@@ -7,7 +7,9 @@ import { SiteDescription, SiteTitle } from '../consts.ts'
 
 const allPosts = await getCollection('posts')
 const now = new Date()
-const posts = allPosts.toSorted((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+const posts = allPosts
+  .toSorted((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .filter(({ data: { published } }) => published !== false)
 ---
 
 <Layout>

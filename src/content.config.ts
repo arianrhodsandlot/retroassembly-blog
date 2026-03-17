@@ -1,6 +1,7 @@
 import { rssSchema } from '@astrojs/rss'
 import { glob } from 'astro/loaders'
-import { defineCollection, z } from 'astro:content'
+import { z } from 'astro/zod'
+import { defineCollection } from 'astro:content'
 
 const posts = defineCollection({
   loader: glob({ base: './src/content/posts', pattern: '**/*.md' }),
@@ -13,7 +14,8 @@ const posts = defineCollection({
           alt: z.string().optional(),
           src: z.string().url(),
         }),
-        pubDate: z.date({ coerce: true }),
+        pubDate: z.coerce.date(),
+        published: z.boolean().default(true),
       }),
     ),
 })
