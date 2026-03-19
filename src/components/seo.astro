@@ -1,12 +1,12 @@
 ---
 import type { ImageMetadata } from 'astro'
 
-type Image = {
+interface Image {
   src: string | ImageMetadata
   alt: string
 }
 
-type SEOMetadata = {
+interface SEOMetadata {
   name: string
   title: string
   description: string
@@ -39,24 +39,24 @@ const {
 } = Astro.props
 
 const og = {
-  name,
-  title,
-  description,
   canonicalURL,
+  description,
   image,
   locale,
+  name,
+  title,
   type: 'website',
   ...Astro.props.og,
 } satisfies OpenGraph
 
 const twitter = {
-  name,
-  title,
-  description,
   canonicalURL,
+  card: 'summary_large_image',
+  description,
   image,
   locale,
-  card: 'summary_large_image',
+  name,
+  title,
   ...Astro.props.twitter,
 }
 

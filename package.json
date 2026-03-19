@@ -4,43 +4,39 @@
   "scripts": {
     "build": "astro build",
     "dev": "astro dev",
+    "prepare": "simple-git-hooks",
     "preview": "astro preview"
   },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged && pnpm tsc"
-  },
-  "lint-staged": {
-    "*.?(m|c)@(j|t)s?(x)": "eslint --fix",
-    "package.json": "pnpm dlx sort-package-json"
-  },
   "dependencies": {
-    "astro": "6.0.5"
+    "astro": "6.0.6"
   },
   "devDependencies": {
-    "@arianrhodsandlot/eslint-config": "0.25.4",
+    "@arianrhodsandlot/vite-plus-config": "1.0.2",
     "@astrojs/rss": "4.0.17",
     "@iconify-json/mdi": "1.2.3",
     "@iconify/tailwind4": "1.2.3",
     "@tailwindcss/typography": "0.5.19",
-    "@tailwindcss/vite": "4.2.1",
+    "@tailwindcss/vite": "4.2.2",
     "@types/markdown-it": "14.1.2",
     "@types/sanitize-html": "2.16.1",
     "clsx": "2.1.1",
-    "eslint": "9.39.2",
-    "jiti": "2.6.1",
     "lint-staged": "16.4.0",
     "markdown-it": "14.1.1",
-    "sanitize-html": "2.17.1",
+    "sanitize-html": "2.17.2",
     "sass": "1.98.0",
     "sharp": "0.34.5",
     "simple-git-hooks": "2.13.1",
-    "tailwindcss": "4.2.1",
-    "wrangler": "4.74.0"
+    "tailwindcss": "4.2.2",
+    "vite-plus": "0.1.12",
+    "wrangler": "4.75.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm vp staged"
+  },
+  "engines": {
+    "node": ">=25.8.1"
   },
   "packageManager": "pnpm@10.32.1",
-  "engines": {
-    "node": ">=25.2.1"
-  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
