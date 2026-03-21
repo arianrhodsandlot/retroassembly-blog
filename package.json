@@ -8,7 +8,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "6.0.6"
+    "astro": "6.0.8"
   },
   "devDependencies": {
     "@arianrhodsandlot/vite-plus-config": "1.0.2",
@@ -27,8 +27,8 @@
     "sharp": "0.34.5",
     "simple-git-hooks": "2.13.1",
     "tailwindcss": "4.2.2",
-    "vite-plus": "0.1.12",
-    "wrangler": "4.75.0"
+    "vite-plus": "0.1.13",
+    "wrangler": "4.76.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm vp staged"
