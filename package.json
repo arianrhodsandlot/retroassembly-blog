@@ -4,47 +4,32 @@
   "scripts": {
     "build": "astro build",
     "dev": "astro dev",
-    "prepare": "simple-git-hooks",
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "6.0.8"
+    "astro": "7.1.1"
   },
   "devDependencies": {
-    "@arianrhodsandlot/vite-plus-config": "1.0.2",
-    "@astrojs/rss": "4.0.17",
+    "@arianrhodsandlot/vite-plus-config": "1.3.0",
+    "@astrojs/rss": "4.0.19",
     "@iconify-json/mdi": "1.2.3",
     "@iconify/tailwind4": "1.2.3",
-    "@tailwindcss/typography": "0.5.19",
-    "@tailwindcss/vite": "4.2.2",
+    "@tailwindcss/typography": "0.5.20",
+    "@tailwindcss/vite": "4.3.3",
     "@types/markdown-it": "14.1.2",
     "@types/sanitize-html": "2.16.1",
     "clsx": "2.1.1",
-    "lint-staged": "16.4.0",
-    "markdown-it": "14.1.1",
-    "sanitize-html": "2.17.2",
-    "sass": "1.98.0",
-    "sharp": "0.34.5",
-    "simple-git-hooks": "2.13.1",
-    "tailwindcss": "4.2.2",
-    "vite-plus": "0.1.13",
-    "wrangler": "4.76.0"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm vp staged"
+    "lint-staged": "17.1.0",
+    "markdown-it": "14.3.0",
+    "sanitize-html": "2.17.6",
+    "sass": "1.101.0",
+    "sharp": "0.35.3",
+    "tailwindcss": "4.3.3",
+    "vite-plus": "0.2.5",
+    "wrangler": "4.112.0"
   },
   "engines": {
-    "node": ">=25.8.1"
+    "node": ">=26.5.0"
   },
-  "packageManager": "pnpm@10.32.1",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild",
-      "sharp",
-      "simple-git-hooks",
-      "unrs-resolver",
-      "workerd"
-    ]
-  }
+  "packageManager": "pnpm@11.15.0"
 }
